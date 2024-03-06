@@ -1,5 +1,6 @@
 # Investigating the Accuracy of Euler’s Method
 
+
 This Python script investigates the accuracy of Euler's method in approximating the solution of a first-order ordinary differential equation.
 
 ## Problem Description
@@ -16,12 +17,14 @@ We will compare the approximations obtained using Euler’s method with the exac
 
 ## Usage
 
+
 1. Run the script.
 2. Enter the initial values for x and y.
-3. Enter the step size for <span style="color:blue">(A) dx = 0.1</span>.
+3. Enter the step size for <span style="color:red">(A) dx = 0.1</span>.
 4. The program will compute and display the approximations using Euler's method along with the exact solution and the error for each step.
 
 ## Instructions
+
 
 - Make sure you have Python installed on your system.
 - Run the script in a Python environment.
