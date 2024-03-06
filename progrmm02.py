@@ -2,7 +2,17 @@ import numpy as np
 
 
 def euler_method(f, x0, y0, h, n):
+    """
+    Approximate the solution of the first-order ordinary differential equation
+    y' = f(x, y) using Euler's method.
 
+    :param f: The function defining the ODE y' = f(x, y)
+    :param x0: The initial value of x
+    :param y0: The initial value of y at x = x0
+    :param h: The step size
+    :param n: The number of steps to take
+    :return: Approximate values of (x, y) using Euler's method
+    """
     xs = [x0]  # List to store x values
     ys = [y0]  # List to store y values
 
@@ -26,11 +36,19 @@ def exact_solution(x):
 
 
 def main():
-    # Initial condition
-    x0 = float(input("Enter the initial value for start : "))  # 0
-    y0 = float(input("Enter the initial value for  end: "))  # 1
+    print("Investigating the Accuracy of Euler’s Method")
+    print("\nUse Euler’s method to solve:")
+    print("y' = 1 + y, y(0) = 1,")
+    print("on the interval 0 <= x <= 1, starting at x = 0 and taking:")
+    print("(A) dx = 0.1")
+    print("(B) dx = 0.05")
+    print("compare the approximations with the values of the exact solution y = 2e^x - 1\n")
 
-    # Input step size and number of steps for (A) 
+    # Initial condition
+    x0 = float(input("Enter the initial value for x: "))  # 0
+    y0 = float(input("Enter the initial value for y: "))  # 1
+
+    # Input step size and number of steps for (A)
     dx_a = float(input("Enter the step size for (A) dx = 0.1: "))  # 0.1 , 0.05
     num_steps_a = int(1 / dx_a)
 
@@ -52,15 +70,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-    """
-    Investigating the Accuracy of Euler’s Method
-    
-    Use Euler’s method to solve:
-                y' = 1 + y, y(0) = 1,
-    on the interval 0<= x <= 1, starting at x = 0 and taking,
-      (A) dx = 0.1
-      (B) dx = 0.05
-                     compare  the approximations  with the values of exact solution y = 2e^x -1
-                     
-    """
