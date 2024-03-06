@@ -18,7 +18,7 @@ We will compare the approximations obtained using Euler’s method with the exac
 
 1. Run the script.
 2. Enter the initial values for x and y.
-3. Enter the step size for (A) dx = 0.1.
+3. Enter the step size for <span style="color:blue">(A) dx = 0.1</span>.
 4. The program will compute and display the approximations using Euler's method along with the exact solution and the error for each step.
 
 ## Instructions
