@@ -58,3 +58,7 @@ x       Euler's Method  Exact Solution  Error
 1              4.1875            4.4366   0.2491
 
 ```
+
+## Graph
+
+![GIF](https://raw.githubusercontent.com/Tanvir-yzu/Euler-s-Method/main/Figure_1.png)
