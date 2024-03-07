@@ -1,4 +1,5 @@
 import numpy as np
+from tabulate import tabulate  # Add this line
 
 class TerminalColors:
     # ANSI escape codes for text color
@@ -55,10 +56,10 @@ def main():
 
         print(f"Step size {label} dx = {dx}")
         print("x\tEuler's Method\tExact Solution\tError")
+        table = []
         for i in range(len(xs)):
-            print(
-                f"{xs[i]:.1f}\t{ys[i]:.4f}\t\t{exact_values[i]:.4f}\t\t{abs(ys[i] - exact_values[i]):.4f}"
-            )
+            table.append([f"{xs[i]:.1f}", f"{ys[i]:.4f}", f"{exact_values[i]:.4f}", f"{abs(ys[i] - exact_values[i]):.4f}"])
+        print(tabulate(table, headers=["x", "Euler's Method", "Exact Solution", "Error"]))
         print()
 
 
