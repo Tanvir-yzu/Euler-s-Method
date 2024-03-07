@@ -11,17 +11,25 @@ def f(x, y):
     return 1 + y
 
 def euler_method(x0, y0, h, x_interval):
-    x = x0
-    y = y0
+    """
+    Implements Euler's method to solve a differential equation.
+
+    Parameters:
+    x0 (float): Initial x value.
+    y0 (float): Initial y value.
+    h (float): Step size.
+    x_interval (list): List containing the start and end x values.
+
+    Returns:
+    tuple: Tuple containing arrays of x and y values.
+    """
     n = int((x_interval[1] - x_interval[0]) / h)
     x_values = np.linspace(x_interval[0], x_interval[1], n+1)
     y_values = np.zeros(n+1)
     y_values[0] = y0
     
     for i in range(n):
-        y = y_values[i] + h * f(x, y)
-        x += h
-        y_values[i+1] = y
+        y_values[i+1] = y_values[i] + h * f(x_values[i], y_values[i])
     
     return x_values, y_values
 
