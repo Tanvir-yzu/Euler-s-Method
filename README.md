@@ -62,3 +62,7 @@ x       Euler's Method  Exact Solution  Error
 ## Graph
 
 ![GIF](https://raw.githubusercontent.com/Tanvir-yzu/Euler-s-Method/main/Figure_1.png)
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](https://github.com/Tanvir-yzu/Euler-s-Method/blob/main/LICENCE.txt) file for details.
