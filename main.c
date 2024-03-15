@@ -43,6 +43,7 @@ int main() {
 
     // Print the initial values and error
     printf("%f\t%f\t%f\t%f\n", x, y, exact_solution(x), fabs(y - exact_solution(x)));
+    
 
     // Perform Euler's method and print results
     for (i = 1; i <= n; i++) {
